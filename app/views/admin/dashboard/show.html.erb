@@ -1,2 +1,18 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<header class="page-header">
+  <h1>Admin Dashboard</h1>
+</header>
+
+<div>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Current Number of Products in the Database: <%= @count_products %>
+      <span class="badge bg-primary rounded-pill"> 
+        <a href="/admin/products" class="link-primary" style="color: #fff">View Products</a>
+      </span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Current Number of Categories in the Database: <%= @count_categories %>
+
+    </li>
+  </ul>
+</div>
