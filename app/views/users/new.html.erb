@@ -1,12 +1,44 @@
-<h1>Register as a new user for JUNGLE:</h1>
+<section class="user-register">
 
-<%= form_for :user, url: '/users' do |f| %>
+  <header class="page-header">
+    <h1>Register as a new user for JUNGLE:</h1> 
+  </header>
 
-  First Name: <%= f.text_field :first_name %>
-  Last Name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-1">
 
-<% end %>
+      <%= form_for :user, url: '/users' do |f| %>
+
+        <div class="form-group">
+          <%= f.label "First Name:" %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Last Name:" %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label "Email:" %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Password:" %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Password Confirmation:" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <br>
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+</section>
